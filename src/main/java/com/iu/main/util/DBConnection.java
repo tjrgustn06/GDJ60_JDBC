@@ -23,7 +23,7 @@ public class DBConnection {
 		
 		Connection connection = DriverManager.getConnection(url, username, Password);
 		
-		String sql = "SELECT * FROM LOCATIONS";
+		String sql = "SELECT * FROM EMPLOYEES";
 		
 		PreparedStatement st = connection.prepareStatement(sql);
 		
@@ -33,8 +33,8 @@ public class DBConnection {
 			System.out.println(rs.getInt("EMPLOYEE_ID"));
 			System.out.println(rs.getString("FIRST_NAME"));
 			System.out.println(rs.getString("LAST_NAME"));
-			System.out.println(rs.getString("EMPLOYEE_ID"));
-			System.out.println(rs.getLong("PHONE_NUMBER"));
+			System.out.println(rs.getString("EMAIL"));
+			System.out.println(rs.getString("PHONE_NUMBER"));
 			System.out.println(rs.getDate("HIRE_DATE"));
 			System.out.println(rs.getString("JOB_ID"));
 			System.out.println(rs.getInt("SALARY"));
